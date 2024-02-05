@@ -1,6 +1,6 @@
 :: Important stuff
 @echo off && cls
-title Redrawn Express
+title GoAnimate Wrapper
 if not exist "installed" (if not exist "notinstalled" (echo GoAnimate Wrapper Configuration File >> notinstalled))
 ::::::::::::::::::::
 :: Initialization ::
@@ -11,12 +11,12 @@ TASKKILL /IM node.exe /F 2>nul
 cls
 
 :::::::::::::::::::::::::::::
-:: Start Redrawn Express ::
+:: Start GoAnimate Wrapper ::
 :::::::::::::::::::::::::::::
 
 :: Check for installation
 if exist notinstalled (
-	echo Redrawn Express is not installed! Installing...
+	echo GoAnimate Wrapper is not installed! Installing...
 	call npm install
 	ren "notinstalled" "installed"
 	cls
@@ -27,6 +27,6 @@ if exist notinstalled (
 
 :: Run npm start
 :start
-echo Redrawn Express is now starting...
+echo GoAnimate Wrapper is now starting...
 echo Please navigate to http://localhost on your browser.
 npm start
